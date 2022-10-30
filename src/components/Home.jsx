@@ -18,9 +18,9 @@ const Home = () => {
             Olá! Sou o João Gabriel.
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            Sou um programador com foco em Desenvolvimento Back-End, atualmente
-            cursando Ensino Médio técnico no Cotemig. Sou disciplinado,
-            metódico, em busca de entregar sempre o melhor para o cliente.
+            Sou um programador com foco em Desenvolvimento Back-End, cursando
+            Ensino Médio técnico no Cotemig. Atualmente utilizando React, Node e
+            C#.
           </p>
           <div>
             <Link
