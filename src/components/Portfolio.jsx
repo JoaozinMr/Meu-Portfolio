@@ -1,36 +1,48 @@
 import React from 'react'
-import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg'
+import portfolio from '../assets/portfolio/portfolio.png'
+import imc from '../assets/portfolio/imc.png'
+import zeburguer from '../assets/portfolio/zeburguer.png'
+import letsgo from '../assets/portfolio/letsgo.png'
+import nlw from '../assets/portfolio/nlw.png'
 import installNode from '../assets/portfolio/installNode.jpg'
-import navbar from '../assets/portfolio/navbar.jpg'
-import reactParallax from '../assets/portfolio/reactParallax.jpg'
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
-import reactWeather from '../assets/portfolio/reactWeather.jpg'
 
 const Portfolio = () => {
-  const portfolios = [
+  const projetos = [
     {
       id: 1,
-      src: arrayDestruct
+      src: portfolio,
+      gitLink: 'https://github.com/JoaozinMr/Meu-Portfolio',
+      siteLink: 'https://joaogabrieldev.netlify.app/'
     },
     {
       id: 2,
-      src: reactParallax
+      src: letsgo,
+      gitLink: 'https://github.com/JoaozinMr/Mini-Ecommerce',
+      siteLink: 'https://letssgoo.netlify.app/'
     },
     {
       id: 3,
-      src: navbar
+      src: zeburguer,
+      gitLink: 'https://github.com/JoaozinMr/MeuPrimeiroSite',
+      siteLink: 'https://zeburguer.netlify.app/'
     },
     {
       id: 4,
-      src: reactSmooth
+      src: nlw,
+      gitLink: 'https://github.com/JoaozinMr/Nlw',
+      siteLink: '/'
     },
     {
       id: 5,
-      src: installNode
+      src: imc,
+      gitLink: 'https://github.com/JoaozinMr/IMC',
+      siteLink: 'https://imcjsteste.netlify.app/'
     },
     {
       id: 6,
-      src: reactWeather
+      src: installNode,
+      gitLink: 'https://github.com/JoaozinMr',
+      siteLink: '/'
     }
   ]
 
@@ -48,15 +60,19 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {projetos.map(({ id, src, gitLink, siteLink }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img src={src} alt="" className="rounded-md duration-200" />
+              <img src={src} alt="" className="rounded-md " />
               <div className="flex items-center justify-center">
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
+                  <a href={siteLink} target="_blanck">
+                    Demo
+                  </a>
                 </button>
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Code
+                  <a href={gitLink} target="_blanck">
+                    Code
+                  </a>
                 </button>
               </div>
             </div>
